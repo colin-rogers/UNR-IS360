@@ -1,9 +1,21 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Content</title>
+
+    <!--CSS Styling-->
+    <style>
+        nav {
+            text-align: right;
+        }
+        
+        h1 {
+            color: black;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!--Creates a horizontal line at the top of the page-->
@@ -18,11 +30,6 @@
     <!--Creates a horizontal line below the menu-->
     <hr style="width:100%;text-align:left;margin-left:0" />
 
-    <article>
-        <h1>Who is Colin Rogers?</h1>
-    </article>
-    <hr />
-
     <!--Creates an unordered list-->
     <h3>Sections in this Article:</h3>
     <ul>
@@ -31,14 +38,18 @@
         <li><a href="#Career"> Career</a></li>
         <li><a href="#Hobbies"> Hobbies</a></li>
     </ul>
+    
+    <hr style="width:100%;text-align:left;margin-left:0" />
 
     <article>
+        <h1>Who is Colin Rogers?</h1>
+
         <!--Creates section 1-->
         <section id="School">
-            <h1>School</h1>
+            <h2>School</h2>
             <p>
-                I first began my journey as a student at UNR, in Fall 2018, as a Computer Science major. 
-                During my time as a CS major I worked my hardest on my <em>C</em> and <em>C++</em> 
+                I first began my journey as a student at UNR, in Fall 2018, as a Computer Science major.
+                During my time as a CS major I worked my hardest on my <em>C</em> and <em>C++</em>
                 programming assignments, but I couldn't pass my exams. What was really disheartening was
                 the two "weed-out" classes (CS 135 and 202) have criteria stating that (1) You have to pass
                 the class with at least a C in the class, and (2) You need a C average on both your exams
@@ -55,22 +66,29 @@
                 especially with the amount of Pre-Business courses required like accounting, marketing,
                 economics, etc. But I powered through, taking 15 credits every semester, as well as Winter
                 and Summer sessions, ultimately only tacking on an extra semester to my original four year
-                time frame. It is here where I plan to finally graduate in December 2022 with my Bachelor's 
+                time frame. It is here where I plan to finally graduate in December 2022 with my Bachelor's
                 Degree.
             </p>
         </section>
 
         <!--Creates section 2-->
         <section id="Career">
-            <h1>Career Interests</h1>
+            <h2>Career Interests</h2>
             <p>
-                For the last year, I have been an employee of the Univsersity
+                For the last year, I have been a student employee in the university's Information Security
+                department, working as a Junior Security Analyst. As part of this position, I am expected to
+                monitor the school's abuse inbox (abuse@unr.edu) and determine if submitted emails are a
+                phishing attempt, spam, malware, or simply a false positive. Once I make this determination,
+                I then make a ticket within our TeamDynamix environment, which is also forwarded to the 
+                university's OIT department. Another job of mine is to monitor our instance of Azure Sentinel,
+                which receives alerts for a variety of things such as: password spray attacks from certain
+                networks, atypical travel for a given user(s), or potential compromised user account.
             </p>
         </section>
 
         <!--Creates section 3-->
         <section id="Hobbies">
-            <h1>Hobbies</h1>
+            <h2>Hobbies</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
