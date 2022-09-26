@@ -7,8 +7,16 @@
 
     <!--CSS Styling-->
     <style>
+        html * {
+            font-family: Verdana !important;
+        }
+
         nav {
             text-align: right;
+        }
+
+        h1 {
+            text-align: center;
         }
     </style>
 </head>
@@ -29,18 +37,36 @@
 
     <!--Adds a photo that was saved locally on the computer-->
     <figure>
-        <img src="this_is_fine.png" alt="This is fine Dog Meme" />
+        <img src="Media/this_is_fine.png" alt="This is fine Dog Meme" />
         <figcaption><em>"This is fine"</em></figcaption>
     </figure>
 
     <!--Adds a photo from the web-->
     <figure>
         <img src="https://i.kym-cdn.com/entries/icons/mobile/000/035/022/KomodoHype_Banner.jpg"
-             width="350" alt="komodo dragon" />
+             width="350" alt="Image of a komodo dragon mid-yawn" />
         <figcaption>Komodo Dragon</figcaption>
     </figure>
 
-    <!--Creates a horizontal line at the bottom of the page-->
+    <!--Creates a horizontal lines at the bottom of the page-->
+    <hr style="width:100%;text-align:left;margin-left:0" />
+
+    <h3>My Links!</h3>
+
+    <nav style="text-align:left">
+
+        <!--Creates clickable LinkedIn logo-->
+        <a href="https://www.linkedin.com/in/crogers2790/" target="_blank">
+            <img src="Media/linkedin.png" alt="Clickable LinkedIn logo that brings user to my personal LinkedIn page." width="30" height="30" />
+        </a>
+
+        <!--Creates clickable Github logo-->
+        <a href="https://github.com/colin-rogers" target="_blank">
+            <img src="Media/github.png" alt="Clickable Github logo that brings user to my personal Github page." width="35" height="35" />
+        </a>
+    </nav>
+
+    <!--Creates a horizontal lines at the bottom of the page-->
     <hr style="width:100%;text-align:left;margin-left:0" />
 
 </body>
