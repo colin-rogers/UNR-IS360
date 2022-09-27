@@ -1,0 +1,20 @@
+#menuTable {
+    border: solid;
+    border-width: 1px;
+    margin-bottom: 10px;
+    width: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#menuTd {
+    border: solid;
+    border-width: 1px;
+    border-color: navy;
+    padding: 10px;
+}
+
+.menuCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
