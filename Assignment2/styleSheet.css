@@ -3,8 +3,16 @@ h1 {
     text-decoration:underline;
 }
 
+th {
+    padding:5px;
+}
+
+
 table {
-    empty-cells:show;
+    border-left:solid;
+    border-left-color:lightgray;
+
+    font-family:sans-serif;
 }
 
 #menuTable {
@@ -26,4 +34,26 @@ table {
 .menuCenter {
     margin-left: auto;
     margin-right: auto;
+}
+
+.table1Center {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.t1DataCenter {
+    text-align: center;
+    padding:3px;
+}
+
+.aCell {
+    border-top:solid;
+    border-top-width:5px;
+    border-top-color:lightgray;
+}
+
+.thUnderline {
+    border-bottom:solid;
+    border-bottom-color:lightgray;
+    border-bottom-width:2px;
 }
