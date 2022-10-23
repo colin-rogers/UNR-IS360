@@ -1,13 +1,16 @@
-﻿/*Menu Table*/
+﻿/*Universal*/
+* {
+    font-family:Verdana;
+}
+
+ /*Menu Table*/
 .menuTable {
-    border: solid;
-    border-width: 1px;
     margin-bottom: 10px;
-    width: auto;
+    width:auto;
     text-align: center;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left:auto;
+    margin-right:auto;
+    border-collapse:collapse;
 }
 
 #menuTd {
@@ -15,28 +18,52 @@
     border-width: 1px;
     border-color: navy;
     padding: 10px;
-    border-collapse: collapse;
 }
 
 /*Reference Manual*/
 .codeBlock {
-    background-color: lightgray;
+    padding-left:2px;
+    padding-right:2px;
+    font-family:Monospace;
+    font-size:large;
+    background-color: #e7e9eb;
     color: red;
 }
 
 #attributeTable {
-    margin-left:auto;
-    margin-right:auto;
-    border-width:2px;
+    border:solid;
+    border-width:1px;
+    border-color:gray;
+    border-collapse:collapse;
 }
 
 .attributeData {
-    vertical-align:top;
-    padding-bottom:10px;
+    vertical-align: top;
+    padding:10px;
 }
 
 .attributeRow:nth-child(even) {
-    background-color:lightgray;
+    background-color: #e7e9eb;
+}
+
+.exampleBox {
+    background-color: #e7e9eb;
+    border-radius: 10px;
+    padding: 10px;
+    width:740px;
+    display:block;
+}
+
+.codeExample {
+    background-color:white;
+    padding:10px;
+    border-left:solid;
+    border-width:3px;
+    border-color:slategray;
+    font-size:large;
+    font-family:Monospace;
+    width:715px;
+    display:block
 }
 
 /*Table 1*/
@@ -45,11 +72,6 @@
     border-left-color: lightgray;
     margin-left: auto;
     margin-right: auto;
-    font-family: sans-serif;
-}
-
-.table1Th {
-    column-span: 2;
 }
 
 #table1ThUnderline {
@@ -76,7 +98,6 @@
 
 /*Table 2*/
 .table2 {
-    font-family: sans-serif;
     margin-left: auto;
     margin-right: auto;
 }
@@ -96,17 +117,17 @@
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    width:100%;
+    width: 100%;
 }
 
 .table2Hot {
-    color:orangered;
+    color: orangered;
 }
 
 .table2Cold {
-    color:deepskyblue;
+    color: deepskyblue;
 }
 
 .blankRow {
-    height:15px !important;
+    height: 15px !important;
 }
