@@ -1,63 +1,67 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Table 1</title>
     <link rel="stylesheet" href="./styleSheet.css" type="text/css" />
+
+    <!--CSS Tip: Use a class (.) when you want to consistently style multiple elements.-->
+    <!--CSS Tip: Use the ID (#) when you have a single element on the page that will take the style-->
+
 </head>
 <body>
     <!--Navigational Menu-->
     <hr />
-    <table id="menuTable" class="menuCenter">
+    <table class="menuTable"> <!--Calls .menuTable-->
         <tr>
-            <td id="menuTd">
+            <td id="menuTd"> <!--Calls #menuTd-->
                 <nav>
-                    <a href="index.html">Index</a>
+                    <a href="./index.html">Index</a>
                 </nav>
             </td>
             <td id="menuTd">
                 <nav>
-                    <a href="referenceManual.html">Reference Manual</a>
+                    <a href="./referenceManual.html">Reference Manual</a>
                 </nav>
             </td>
             <td id="menuTd">
                 <nav>
-                    <a href="table1.html">Table 1</a>
+                    <a href="./table1.html">Table 1</a>
                 </nav>
             </td>
             <td id="menuTd">
                 <nav>
-                    <a href="table2.html">Table 2</a>
+                    <a href="./table2.html">Table 2</a>
                 </nav>
             </td>
         </tr>
     </table>
     <hr />
 
-    <h1>Table 1</h1>
+    <!--Table 1-->
     <br />
-    <table class="table1Center">
-        <tr>
+    <table class="table1">
+        <tr> <!--Each header spans 2-->
             <th>&nbsp;</th>
             <th colspan="2">Substrates Reactions<sup>-1</sup></th>
-            <th class="thUnderline" colspan="2">-1.9&#176;C</th>
-            <th class="thUnderline" colspan="2">+25&#176;C</th>
-            <th class="thUnderline" colspan="2">+122&#176;C</th>
+            <th id="table1ThUnderline" colspan="2">-1.9&#176;C</th>
+            <th id="table1ThUnderline" colspan="2">+25&#176;C</th>
+            <th id="table1ThUnderline" colspan="2">+122&#176;C</th>
         </tr>
         <tr>
-            <th>&nbsp;</th>
-            <th width="50px">&nbsp;</th>
-            <th>&nbsp;</th>
-            <th>1 atm</th>
-            <th>1000 atm</th>
-            <th>1 atm</th>
-            <th>1000 atm</th>
-            <th>1 atm</th>
-            <th>1000 atm</th>
+            <td>&nbsp;</td>
+            <td width="50px">&nbsp;</td>
+            <td width="125px">&nbsp;</td>
+            <td id="table1Atm">1 atm</td>
+            <td id="table1Atm">1000 atm</td>
+            <td id="table1Atm">1 atm</td>
+            <td id="table1Atm">1000 atm</td>
+            <td id="table1Atm">1 atm</td>
+            <td id="table1Atm">1000 atm</td>
         </tr>
-        <tr style="background-color:lightgray">
-            <td colspan="10"><b>A</b></td>
+        <tr id="table1ARow">
+            <td colspan="9"><b>A</b></td>
         </tr>
 
         <!--H2-CO2-->
@@ -65,12 +69,12 @@
             <td width="150px">H<sub>2</sub> - CO<sub>2</sub></td>
             <td>4</td>
             <td>&nbsp;</td>
-            <td class="t1DataCenter">11.3</td>
-            <td class="t1DataCenter">10.3</td>
-            <td class="t1DataCenter">18.1</td>
-            <td class="t1DataCenter">17.1</td>
-            <td class="t1DataCenter">42.6</td>
-            <td class="t1DataCenter">41.7</td>
+            <td id="table1Td">11.3</td>
+            <td id="table1Td">10.3</td>
+            <td id="table1Td">18.1</td>
+            <td id="table1Td">17.1</td>
+            <td id="table1Td">42.6</td>
+            <td id="table1Td">41.7</td>
         </tr>
 
         <!--CO-->
@@ -78,12 +82,12 @@
             <td>CO</td>
             <td>4</td>
             <td>&nbsp;</td>
-            <td class="t1DataCenter">ND</td>
-            <td class="t1DataCenter">ND</td>
-            <td class="t1DataCenter"><b>-13.7</b></td>
-            <td class="t1DataCenter">ND</td>
-            <td class="t1DataCenter">ND</td>
-            <td class="t1DataCenter">ND</td>
+            <td id="table1Td">ND</td>
+            <td id="table1Td">ND</td>
+            <td id="table1Td"><b>&#8211;13.7</b></td>
+            <td id="table1Td">ND</td>
+            <td id="table1Td">ND</td>
+            <td id="table1Td">ND</td>
         </tr>
 
         <!--CO+H2-->
@@ -91,53 +95,53 @@
             <td>CO + H<sub>2</sub></td>
             <td>2</td>
             <td>&nbsp;</td>
-            <td class="t1DataCenter">ND</td>
-            <td class="t1DataCenter">ND</td>
-            <td class="t1DataCenter">-1.28</td>
-            <td class="t1DataCenter">ND</td>
-            <td class="t1DataCenter">ND</td>
-            <td class="t1DataCenter">ND</td>
+            <td id="table1Td">ND</td>
+            <td id="table1Td">ND</td>
+            <td id="table1Td">&#8211;1.28</td>
+            <td id="table1Td">ND</td>
+            <td id="table1Td">ND</td>
+            <td id="table1Td">ND</td>
         </tr>
-        
+
         <!--Formate-->
         <tr>
             <td>Formate</td>
             <td>4</td>
             <td>&nbsp;</td>
-            <td class="t1DataCenter">6.00</td>
-            <td class="t1DataCenter">5.62</td>
-            <td class="t1DataCenter">10.7</td>
-            <td class="t1DataCenter">10.4</td>
-            <td class="t1DataCenter">27.9</td>
-            <td class="t1DataCenter">27.5</td>
+            <td id="table1Td">6.00</td>
+            <td id="table1Td">5.62</td>
+            <td id="table1Td">10.7</td>
+            <td id="table1Td">10.4</td>
+            <td id="table1Td">27.9</td>
+            <td id="table1Td">27.5</td>
         </tr>
-        
-        
+
+
         <!--Formate+H2-->
         <tr>
             <td>Formate + H<sub>2</sub></td>
             <td>2</td>
             <td>&nbsp;</td>
-            <td class="t1DataCenter">12.1</td>
-            <td class="t1DataCenter">10.8</td>
-            <td class="t1DataCenter">23.1</td>
-            <td class="t1DataCenter">21.8</td>
-            <td class="t1DataCenter">62.9</td>
-            <td class="t1DataCenter">61.6</td>
+            <td id="table1Td">12.1</td>
+            <td id="table1Td">10.8</td>
+            <td id="table1Td">23.1</td>
+            <td id="table1Td">21.8</td>
+            <td id="table1Td">62.9</td>
+            <td id="table1Td">61.6</td>
         </tr>
-        
-        
+
+
         <!--Lactate-->
         <tr>
             <td>Lactate</td>
             <td>2</td>
             <td>&nbsp;</td>
-            <td class="t1DataCenter"><b>-49.8</b></td>
-            <td class="t1DataCenter"><b>-49.3</b></td>
-            <td class="t1DataCenter"><b>-50.5</b></td>
-            <td class="t1DataCenter"><b>-50.0</b></td>
-            <td class="t1DataCenter"><b>-53.0</b></td>
-            <td class="t1DataCenter"><b>-52.5</b></td>
+            <td id="table1Td"><b>&#8211;49.8</b></td>
+            <td id="table1Td"><b>&#8211;49.3</b></td>
+            <td id="table1Td"><b>&#8211;50.5</b></td>
+            <td id="table1Td"><b>&#8211;50.0</b></td>
+            <td id="table1Td"><b>&#8211;53.0</b></td>
+            <td id="table1Td"><b>&#8211;52.5</b></td>
         </tr>
     </table>
 </body>

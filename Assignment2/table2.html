@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,31 +9,197 @@
 <body>
     <!--Navigational Menu-->
     <hr />
-    <table id="menuTable" class="menuCenter">
+    <table class="menuTable">
+        <!--Calls the class .menuTable-->
         <tr>
             <td id="menuTd">
                 <nav>
-                    <a href="index.html">Index</a>
+                    <a href="./index.html">Index</a>
                 </nav>
             </td>
             <td id="menuTd">
                 <nav>
-                    <a href="referenceManual.html">Reference Manual</a>
+                    <a href="./referenceManual.html">Reference Manual</a>
                 </nav>
             </td>
             <td id="menuTd">
                 <nav>
-                    <a href="table1.html">Table 1</a>
+                    <a href="./table1.html">Table 1</a>
                 </nav>
             </td>
             <td id="menuTd">
                 <nav>
-                    <a href="table2.html">Table 2</a>
+                    <a href="./table2.html">Table 2</a>
                 </nav>
             </td>
         </tr>
     </table>
     <hr />
-    <h1>Table 2</h1>
+
+    <!--Table 2-->
+    <!--Current Conditions table-->
+    <table class="table2Head">
+        <tr>
+            <th style="font-size:smaller; text-align:left">Current conditions at</th>
+        </tr>
+        <tr>
+            <td style="color:steelblue; font-weight:bold">UNR CAMPUS (UNRC)</td>
+        </tr>
+        <tr>
+            <td style="font-size:smaller">
+                <b>Lat:</b> 39.53917&#176;N   <b>Lon:</b> 119.80538&#176;N    <b>Elev:</b> 4480ft.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="table2Body">
+                    <tr>
+                        <td>NA</td>
+                        <td width="100px">&nbsp;</td>
+                        <td style="text-align:right"><b>Humidity</b></td>
+                        <td>52%</td>
+                        <td><b>More Information:</b></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:xx-large" rowspan="2"><b>57&#176;F</b></td>
+                        <td>&nbsp;</td>
+                        <td style="text-align:right"><b>Wind Speed</b></td>
+                        <td>NE 2 G 4 MPH</td>
+                        <td>
+                            <a href="https://www.weather.gov/rev/" target="_blank">Local Forecast Office</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td style="text-align:right"><b>Barometer</b></td>
+                        <td>NA</td>
+                        <td>
+                            <a href="https://www.weather.gov/wrh/LocalWeather?zone=NVZ003" target="_blank">More Local Wx</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:large">14&#176;C</td>
+                        <td>&nbsp;</td>
+                        <td style="text-align:right"><b>Dewpoint</b></td>
+                        <td>40&#176;F (4&#176;C)</td>
+                        <td>
+                            <a href="https://www.weather.gov/wrh/timeseries?site=E6551" target="_blank">3 Day History</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                        <td style="text-align:right"><b>Visibility</b></td>
+                        <td>NA</td>
+                        <td>
+                            <a href="https://mobile.weather.gov/index.php?lat=39.5277&lon=-119.8135&unit=0&lg=english" target="_blank">Mobile Weather</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                        <td style="text-align:right"><b>Last Update</b></td>
+                        <td>24 Sep 9:10 am PDT</td>
+                        <td>
+                            <a href="https://forecast.weather.gov/MapClick.php?lat=39.5277&lon=-119.8135&unit=0&lg=english&FcstType=graphical" target="_blank">Hourly Weather Forecast</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <!--Extended Forecast table-->
+    <table class="table2Head">
+        <tr>
+            <th style="font-size:smaller; text-align:left">Extended Forecast for</th>
+        </tr>
+        <tr>
+            <td style="color:steelblue; font-weight:bold">Reno NV</td>
+        </tr>
+        <tr>
+            <td>
+                <table class="table2Body">
+                    <tr>
+                        <th>Today</th>
+                        <th>Tonight</th>
+                        <th>Sunday</th>
+                        <th>Sunday Night</th>
+                        <th>Monday</th>
+                        <th>Monday Night</th>
+                        <th>Tuesday</th>
+                        <th>Tuesday Night</th>
+                        <th>Wednesday</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="./Media/sun.png" />
+                                <figcaption style="text-align:center">Sunny</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./Media/moon.png" />
+                                <figcaption style="text-align:center">Clear</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./Media/sun.png" />
+                                <figcaption style="text-align:center">Sunny</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./Media/moon.png" />
+                                <figcaption style="text-align:center">Clear</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./Media/sun.png" />
+                                <figcaption style="text-align:center">Sunny</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./Media/moon.png" />
+                                <figcaption style="text-align:center">Clear</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./Media/sun.png" />
+                                <figcaption style="text-align:center">Sunny</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./Media/moon.png" />
+                                <figcaption style="text-align:center">Clear</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="./Media/sun.png" />
+                                <figcaption style="text-align:center">Sunny</figcaption>
+                            </figure>
+                        </td>
+                    </tr>
+                    <tr class="blankRow"></tr>
+                    <tr>
+                        <th class="table2Hot">High: 74&#176;F</th>
+                        <th class="table2Cold">High: 46&#176;F</th>
+                        <th class="table2Hot">High: 74&#176;F</th>
+                        <th class="table2Cold">High: 46&#176;F</th>
+                        <th class="table2Hot">High: 74&#176;F</th>
+                        <th class="table2Cold">High: 46&#176;F</th>
+                        <th class="table2Hot">High: 74&#176;F</th>
+                        <th class="table2Cold">High: 46&#176;F</th>
+                        <th class="table2Hot">High: 74&#176;F</th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

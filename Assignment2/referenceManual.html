@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,68 +9,222 @@
 <body>
     <!--Navigational Menu-->
     <hr />
-    <table id="menuTable" class="menuCenter">
+    <table class="menuTable">
+        <!--Calls the class .menuTable-->
         <tr>
             <td id="menuTd">
                 <nav>
-                    <a href="index.html">Index</a>
+                    <a href="./index.html">Index</a>
                 </nav>
             </td>
             <td id="menuTd">
                 <nav>
-                    <a href="referenceManual.html">Reference Manual</a>
+                    <a href="./referenceManual.html">Reference Manual</a>
                 </nav>
             </td>
             <td id="menuTd">
                 <nav>
-                    <a href="table1.html">Table 1</a>
+                    <a href="./table1.html">Table 1</a>
                 </nav>
             </td>
             <td id="menuTd">
                 <nav>
-                    <a href="table2.html">Table 2</a>
+                    <a href="./table2.html">Table 2</a>
                 </nav>
             </td>
         </tr>
     </table>
     <hr />
-    <h1>Reference Manual</h1>
+
+    <!--Reference Manual-->
+    <h1 style="text-align:center">Reference Manual:</h1>
+    <h2 style="text-align:center">HTML &lt;a&gt; Tag &amp; Hyperlinks</h2>
+    <hr />
     <article>
         <section>
-            <h2>Abstract</h2>
+            <h2><u>Abstract</u></h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                In HTML, the <code class="codeBlock">&lt;a&gt;</code> is used to create a hyperlink that is used to
+                navigate pages within our site, or to links on the web.
+            </p>
+            <p>
+                These links come in two varieties:
+                <ul>
+                    <li>Absolute links</li>
+                    <li>Relative links</li>
+                </ul>
+            </p>
+            <p>
+                The <code class="codeBlock">&lt;a&gt;</code> can also be used to create bookmarks.
+                <ul>
+                    <li>Links to a position on the same page.</li>
+                </ul>
+            </p>
+            <p>
+                As well as configure where the new page appears.
+                <ul>
+                    <li>In a new browser tab, or replace the existing page.</li>
+                </ul>
             </p>
         </section>
         <section>
-            <h2>Details</h2>
+            <h2><u>Details</u></h2>
+            <h3>Definition and Usage</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                The <code class="codeBlock">&lt;a&gt;</code> tag defines a hyperlink, which is used 
+                to link from one page to another.
             </p>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                The most important attribute of the <code class="codeBlock">&lt;a&gt;</code> element
+                is the <code class="codeBlock">href</code> attribute, which indicates the link's 
+                destination.
             </p>
+            <p>
+                By default, links will appear as follows in all browsers:
+                <ul>
+                    <li>
+                        An unvisted link is underlined and blue: 
+                        <span style="color:blue"><u>Unvisted Link</u></span>
+                    </li>
+                    <li>
+                        A visited link is underlined and purple:
+                        <span style="color:purple"><u>Visted Link</u></span>
+                    </li>
+                    <li>
+                        An active link is underlined and red:
+                        <span style="color:red"><u>Active Link</u></span>
+                    </li>
+                </ul>
+            </p>
+            <h3>Tips</h3>
+            <p>
+                <b>Tip:</b> If the <code class="codeBlock">&lt;a&gt;</code> has no
+                <code class="codeBlock">href</code> attribute, it is only a placeholder for
+                a link.
+            </p>
+            <p>
+               <b>Tip:</b> A linked page is normally displayed in the current browser window, 
+               unless you specify another target.
+               <ul>
+                   <li>No target: Will open target page in current tab.</li>
+                   <li>
+                       <code class="codeBlock">_blank</code>: Will open target page in a new tab.
+                   </li>
+                   <li>
+                       <code class="codeBlock">_parent</code>: Will open target page in the
+                       parent iFrame.
+                   </li>
+                   <li>
+                       <code class="codeBlock">_self</code>: Will open target page in the same
+                       iFrame in which it was clicked.
+                   </li>
+                   <li>
+                       <code class="codeBlock">_top</code>: Will open target page in the topmost
+                       iFrame.
+                   </li>
+               </ul>
+            </p>
+            <h3>Attributes</h3>
+            <table>
+                <tr style="text-align:left">
+                    <th style="width:20%">Attribute</th>
+                    <th style="width:35%">Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><u>download</u></td>
+                    <td><i>filename</i></td>
+                    <td>
+                        Specifies the target will be downloaded when a user clicks on the 
+                        hyperlink
+                    </td>
+                </tr>
+                <tr>
+                    <td><u>href</u></td>
+                    <td><i>URL</i></td>
+                    <td>Specifies the URL of the page the link goes to</td>
+                </tr>
+                <tr>
+                    <td><u>hreflang</u></td>
+                    <td><i>language_code</i></td>
+                    <td>Specifies the language of the linked document</td>
+                </tr>
+                <tr>
+                    <td><u>media</u></td>
+                    <td><i>media_query</i></td>
+                    <td>
+                        Specifies what media/device the linked document is optimized for
+                    </td>
+                </tr>
+                <tr>
+                    <td><u>ping</u></td>
+                    <td><i>list_of_URLs</i></td>
+                    <td>
+                        Specifies a space-separated list of URLs to which, when the link
+                        is followed, post requests with the body ping will be sent by the
+                        browser (in the background). Typically used for tracking.
+                    </td>
+                </tr>
+                <tr>
+                    <td><u>referrerpolicy</u></td>
+                    <td>
+                        no-referrer<br />
+                        no-referrer-when-downgrade<br />
+                        origin<br />
+                        origin-when-cross-origin<br />
+                        same-origin<br />
+                        strict-origin-when-cross-origin<br />
+                        unsafe-url
+                    </td>
+                    <td>
+                        Specifies which referer information to send with the link
+                    </td>
+                </tr>
+                <tr>
+                    <td><u>rel</u></td>
+                    <td>
+                        alternate<br />
+                        author<br />
+                        bookmark<br />
+                        external<br />
+                        help<br />
+                        license<br />
+                        next<br />
+                        nofollow<br />
+                        noreferrer<br />
+                        noopener<br />
+                        prev<br />
+                        search<br />
+                        tag<br />
+                    </td>
+                    <td>
+                        Specifies the relationship between the current document and the linked
+                        document
+                    </td>
+                </tr>
+                <tr>
+                    <td><u>target</u></td>
+                    <td>
+                        _blank<br />
+                        _parent<br />
+                        _self<br />
+                        _top
+                    </td>
+                    <td>
+                        Specifies where to open the linked document
+                    </td>
+                </tr>
+                <tr>
+                    <td><u>type</u></td>
+                    <td><i>media_tpye</i></td>
+                    <td>
+                        Specifies the media type of the linked document
+                    </td>
+                </tr>
+            </table>
         </section>
         <section>
-            <h2>Examples</h2>
+            <h2><u>Examples</u></h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
