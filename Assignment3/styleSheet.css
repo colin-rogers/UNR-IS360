@@ -1,1 +1,51 @@
+/*Universal*/
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+h1 {
+    text-align:center;
+}
+
+body {
+    background-color: #202c4a;
+    color:lightgray;
+}
+
+section {
+    border:hidden;
+    border-radius:10px;
+    background-color:lightgray;
+    color:black;
+    padding:10px;
+    margin-right:50px;
+    margin-left:50px;
+}
+
+/*Index*/
+.indexHeader {
+    text-align:center;
+}
+
+/*Nav Menu*/
+.menuTable {
+    margin-right:auto;
+    margin-left:auto;
+    border:solid;
+    border-width:2px;
+    border-color:black;
+    border-collapse:collapse;
+}
+
+.menuOptions {
+    border:solid;
+    border-width:2px;
+    border-color:black;
+    padding:10px;
+    font-weight:bold;
+    background-color:lightgray;
+}
+
+.menuLink:hover {
+    background-color:gray;
+}
