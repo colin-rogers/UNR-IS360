@@ -5,6 +5,13 @@
     <meta charset="utf-8" />
     <title>Afford</title>
     <link rel="stylesheet" href="./styleSheet.css" type="text/css" />
+
+    <!--JavaScript Functions-->
+    <script>
+        function housePayment() {
+            document.getElementById("payment").innerHTML = "poggers!";
+        }
+    </script>
 </head>
 <body>
     <hr />
@@ -37,7 +44,36 @@
     <h2 style="text-align:center">Based on family gross income &amp; expenses</h2>
     <br />
     <section>
-        <p>this is a test</p>
+        <form>
+            <table class="calcTable">
+                <tr>
+                    <th class="calcHeaders">
+                        <label for="monthlyIncome">Gross Monthly Income:</label>
+                    </th>
+                    <td>
+                        <input type="number" id="monthlyIncome" name="monthlyIncome" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="calcHeaders">
+                        <label for="totalExpenses">Total Expenses:</label>
+                    </th>
+                    <td>
+                        <input type="number" id="totalExpenses" name="totalExpenses" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="calcButton" colspan="2">
+                        <button type="button" onclick="housePayment()">Calculate</button>
+                    </td>
+                </tr>
+            </table>
+            <p class="calcOutput" id="payment"></p>
+        </form>
+        <p class="calcOutput" id="payment"></p>
     </section>
     <br />
     <hr />
