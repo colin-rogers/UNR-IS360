@@ -5,6 +5,13 @@
     <meta charset="utf-8" />
     <title>Payment</title>
     <link rel="stylesheet" href="./styleSheet.css" type="text/css" />
+    
+    <!--JavaScript Functions-->
+    <script>
+        function loanPayment() {
+            document.getElementById("loan").innerHTML = "poggers!";
+        }
+    </script>
 </head>
 <body>
     <hr />
@@ -35,7 +42,43 @@
     <hr />
     <h1>Payment on a Loan</h1><br />
     <section>
-        <p>this is a test</p>
+        <form>
+            <table class="calcTable">
+                <tr>
+                    <th class="calcHeaders">
+                        <label for="loanAmt">Initial Loan Amount:</label>
+                    </th>
+                    <td>
+                        <input type="number" id="loanAmt" name="loanAmt" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="calcHeaders">
+                        <label for="numPeriods">Number of Periods:</label>
+                    </th>
+                    <td>
+                        <input type="number" id="numPeriods" name="numPeriods" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="calcHeaders">
+                        <label for="interestRate">Interest Rate (Years):</label>
+                    </th>
+                    <td>
+                        <input type="number" id="interestRtDuration" name="interestRtDuration" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="calcButton" colspan="2">
+                        <button type="button" onclick="loanPayment()">Calculate</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <p class="calcOutput" id="loan"></p>
     </section>
     <br />
     <hr />
