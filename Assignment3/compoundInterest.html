@@ -5,6 +5,13 @@
     <meta charset="utf-8" />
     <title>Compound Interest</title>
     <link rel="stylesheet" href="./styleSheet.css" type="text/css" />
+
+    <!--JavaScript Functions-->
+    <script>
+        function compoundInterest() {
+            document.getElementById("interest").innerHTML = "poggers!";
+        }
+    </script>
 </head>
 <body>
     <hr />
@@ -35,7 +42,43 @@
     <hr />
     <h1>Compound Interest on an Investment</h1><br />
     <section>
-        <p>this is a test</p>
+        <form>
+            <table class="calcTable">
+                <tr>
+                    <th class="calcHeaders">
+                        <label for="investAmt">Initial Investment Amount:</label>
+                    </th>
+                    <td>
+                        <input type="number" id="investAmt" name="investAmt" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="calcHeaders">
+                        <label for="numPeriods">Number of Periods:</label>
+                    </th>
+                    <td>
+                        <input type="number" id="numPeriods" name="numPeriods" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="calcHeaders">
+                        <label for="interestRate">Interest Rate Per Period:</label>
+                    </th>
+                    <td>
+                        <input type="number" id="interestRate" name="interestRate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="calcButton" colspan="2">
+                        <button type="button" onclick="compoundInterest()">Calculate</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <p class="calcOutput" id="interest"></p>
     </section>
     <br />
     <hr />
