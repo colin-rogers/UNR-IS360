@@ -18,13 +18,13 @@ section {
     background-color:lightgray;
     color:black;
     padding:10px;
-    margin-right:50px;
-    margin-left:50px;
+    margin-right:25%;
+    margin-left:25%;
 }
 
 /*Index*/
 .indexHeader {
-    text-align:center;
+    text-align:center; 
 }
 
 /*Nav Menu*/
@@ -48,4 +48,22 @@ section {
 
 .menuLink:hover {
     background-color:gray;
+}
+
+/*Calculator Formatting*/
+.calcHeaders {
+    text-align:right;
+}
+
+.calcTable {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.calcButton {
+    text-align:center;
+}
+
+.calcOutput {
+    text-align:center;
 }
