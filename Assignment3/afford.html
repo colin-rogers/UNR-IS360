@@ -4,12 +4,36 @@
 <head>
     <meta charset="utf-8" />
     <title>Afford</title>
-    <link rel="stylesheet" href="./styleSheet.css" type="text/css" />
+    <link rel="stylesheet" href="./styleSheets/styleSheet.css" type="text/css" />
 
     <!--JavaScript Functions-->
     <script>
         function housePayment() {
-            document.getElementById("payment").innerHTML = "poggers!";
+            // Get values from page input
+            var monthlyIncome = document.getElementById("inputMonthlyIncome").value;
+            var totalExpenses = document.getElementById("inputTotalExpenses").value;
+
+            // Calculation
+            var GMI29 = monthlyIncome * .29 // Calculates 29% of Gross Monthly Income
+            var GMI39 = (monthlyIncome - totalExpenses) * .39 // Calculates 39% of (Gross Monthly Income - Expenses)
+
+            // Return largest value
+            if (GMI29 < GMI39) {
+                output = GMI29
+            }
+            else {
+                output = GMI39
+            }
+
+            // Return values
+            if (output = GMI29) {
+                document.getElementById("payment").innerHTML =
+                    'Your maximum affordable house payment is $' + output + ', based on 29% of your gross income';
+            }
+            else {
+                document.getElementById("payment").innerHTML =
+                    'Your maximum affordable house payment is $' + output + ', based on 39% of your gross income minus total expenses';
+            }
         }
     </script>
 </head>
@@ -48,18 +72,18 @@
             <table class="calcTable">
                 <tr>
                     <th class="calcHeaders">
-                        <label for="monthlyIncome">Gross Monthly Income:</label>
+                        <label for="inputMonthlyIncome">Gross Monthly Income:</label>
                     </th>
                     <td>
-                        <input type="number" id="monthlyIncome" name="monthlyIncome" />
+                        <input type="number" id="inputMonthlyIncome" name="monthlyIncome" placeholder="Gross Monthly Income"/>
                     </td>
                 </tr>
                 <tr>
                     <th class="calcHeaders">
-                        <label for="totalExpenses">Total Expenses:</label>
+                        <label for="inputTotalExpenses">Total Expenses:</label>
                     </th>
                     <td>
-                        <input type="number" id="totalExpenses" name="totalExpenses" />
+                        <input type="number" id="inputTotalExpenses" name="totalExpenses" placeholder="Total Expenses"/>
                     </td>
                 </tr>
                 <tr>
@@ -73,7 +97,6 @@
             </table>
             <p class="calcOutput" id="payment"></p>
         </form>
-        <p class="calcOutput" id="payment"></p>
     </section>
     <br />
     <hr />
