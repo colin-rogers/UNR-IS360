@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Payment</title>
-    <link rel="stylesheet" href="./styleSheets/styleSheet.css" type="text/css" />
+    <link rel="stylesheet" href="./styleSheet.css" type="text/css" />
     
     <!--JavaScript Functions-->
     <script>
@@ -12,10 +12,10 @@
             // Get values from page input
             var pv = document.getElementById("inputLoanAmt").value; // Present (initial) Value
             var n = (document.getElementById("inputNumPeriods").value * 12); // Number of periods
-            var r = (document.getElementById("inputInterestRate").value / 12); // Interest rate per period
+            var r = ((document.getElementById("inputInterestRate").value / 100 ) / 12); // Interest rate per period, 
 
             // Calculation
-            var payment = ((r * pv) / 1 - Math.pow((1 + r), (-1 * n)));
+            var payment = ((r * pv) / (1 - Math.pow((1 + r), (-1 * n))));
             output = parseFloat(payment).toFixed(2);
 
             // Return values
@@ -73,7 +73,7 @@
                 </tr>
                 <tr>
                     <th class="calcHeaders">
-                        <label for="inputInterestRate">Interest Rate:</label>
+                        <label for="inputInterestRate">Interest Rate (%):</label>
                     </th>
                     <td>
                         <input type="number" id="inputInterestRate" name="interestRtDuration" placeholder="Yearly Interest Rate"/>
