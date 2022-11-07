@@ -4,12 +4,23 @@
 <head>
     <meta charset="utf-8" />
     <title>Payment</title>
-    <link rel="stylesheet" href="./styleSheet.css" type="text/css" />
+    <link rel="stylesheet" href="./styleSheets/styleSheet.css" type="text/css" />
     
     <!--JavaScript Functions-->
     <script>
         function loanPayment() {
-            document.getElementById("loan").innerHTML = "poggers!";
+            // Get values from page input
+            var pv = document.getElementById("inputLoanAmt").value; // Present (initial) Value
+            var n = (document.getElementById("inputNumPeriods").value * 12); // Number of periods
+            var r = (document.getElementById("inputInterestRate").value / 12); // Interest rate per period
+
+            // Calculation
+            var payment = ((r * pv) / 1 - Math.pow((1 + r), (-1 * n)));
+            output = parseFloat(payment).toFixed(2);
+
+            // Return values
+            document.getElementById("loan").innerHTML =
+                'Your monthly payment amount will be $' + output;
         }
     </script>
 </head>
@@ -46,26 +57,26 @@
             <table class="calcTable">
                 <tr>
                     <th class="calcHeaders">
-                        <label for="loanAmt">Initial Loan Amount:</label>
+                        <label for="inputLoanAmt">Initial Loan Amount:</label>
                     </th>
                     <td>
-                        <input type="number" id="loanAmt" name="loanAmt" />
+                        <input type="number" id="inputLoanAmt" name="loanAmt" placeholder="Loan Amount"/>
                     </td>
                 </tr>
                 <tr>
                     <th class="calcHeaders">
-                        <label for="numPeriods">Number of Periods:</label>
+                        <label for="inputNumPeriods">Number of Periods:</label>
                     </th>
                     <td>
-                        <input type="number" id="numPeriods" name="numPeriods" />
+                        <input type="number" id="inputNumPeriods" name="numPeriods" placeholder="# of Periods"/>
                     </td>
                 </tr>
                 <tr>
                     <th class="calcHeaders">
-                        <label for="interestRate">Interest Rate (Years):</label>
+                        <label for="inputInterestRate">Interest Rate:</label>
                     </th>
                     <td>
-                        <input type="number" id="interestRtDuration" name="interestRtDuration" />
+                        <input type="number" id="inputInterestRate" name="interestRtDuration" placeholder="Yearly Interest Rate"/>
                     </td>
                 </tr>
                 <tr>
@@ -77,8 +88,8 @@
                     </td>
                 </tr>
             </table>
+            <p class="calcOutput" id="loan"></p>
         </form>
-        <p class="calcOutput" id="loan"></p>
     </section>
     <br />
     <hr />
