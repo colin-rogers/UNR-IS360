@@ -9,7 +9,7 @@
     <!--JavaScript Functions-->
     <script>
         function loanPayment() {
-            // Get values from page input
+            // Get values from page input (variables are as used in the loan payment formula)
             var pv = document.getElementById("inputLoanAmt").value; // Present (initial) Value
             var n = (document.getElementById("inputNumPeriods").value * 12); // Number of periods
             var r = ((document.getElementById("inputInterestRate").value / 100 ) / 12); // Interest rate per period, 
@@ -68,7 +68,7 @@
                         <label for="inputNumPeriods">Number of Periods:</label>
                     </th>
                     <td>
-                        <input type="number" id="inputNumPeriods" name="numPeriods" placeholder="# of Periods"/>
+                        <input type="number" id="inputNumPeriods" name="numPeriods" placeholder="Number of Periods"/>
                     </td>
                 </tr>
                 <tr>
