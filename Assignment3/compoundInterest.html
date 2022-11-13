@@ -3,37 +3,25 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Afford</title>
-    <link rel="stylesheet" href="./styleSheets/styleSheet.css" type="text/css" />
+    <title>Compound Interest</title>
+    <link rel="stylesheet" href="./styleSheet.css" type="text/css" />
 
     <!--JavaScript Functions-->
     <script>
-        function housePayment() {
-            // Get values from page input
-            var monthlyIncome = document.getElementById("inputMonthlyIncome").value;
-            var totalExpenses = document.getElementById("inputTotalExpenses").value;
+        function compoundInterest() {
+            // Get values from page input (variables are as used in the compound interest formula)
+            var n = 12; // how often is the loan compounded?
+            var p = document.getElementById("inputInvestAmt").value; // Initial Amount
+            var t = (document.getElementById("inputNumPeriods").value * n); // Number of Periods converted based on n
+            var r = ((document.getElementById("inputInterestRate").value / 100) / n); // Interest Rate per period
 
-            // Calculation
-            var GMI29 = monthlyIncome * .29 // Calculates 29% of Gross Monthly Income
-            var GMI39 = (monthlyIncome - totalExpenses) * .39 // Calculates 39% of (Gross Monthly Income - Expenses)
+            //Calculation
+            var interest = (p * (Math.pow((1 + r), t)));
+            output = parseFloat(interest).toFixed(2);
 
-            // Return largest value
-            if (GMI29 < GMI39) {
-                output = GMI29
-            }
-            else {
-                output = GMI39
-            }
-
-            // Return values
-            if (output = GMI29) {
-                document.getElementById("payment").innerHTML =
-                    'Your maximum affordable house payment is $' + output + ', based on 29% of your gross income';
-            }
-            else {
-                document.getElementById("payment").innerHTML =
-                    'Your maximum affordable house payment is $' + output + ', based on 39% of your gross income minus total expenses';
-            }
+            // Return Values
+            document.getElementById("interest").innerHTML =
+                'Your balance after '+ (t / n) +' years is approximately $' + output;
         }
     </script>
 </head>
@@ -64,26 +52,32 @@
         </tr>
     </table>
     <hr />
-    <h1>Maximum Affordable House Payment</h1>
-    <h2 style="text-align:center">Based on family gross income &amp; expenses</h2>
-    <br />
+    <h1>Compound Interest on an Investment</h1><br />
     <section>
         <form>
             <table class="calcTable">
                 <tr>
                     <th class="calcHeaders">
-                        <label for="inputMonthlyIncome">Gross Monthly Income:</label>
+                        <label for="inputInvestAmt">Initial Investment Amount:</label>
                     </th>
                     <td>
-                        <input type="number" id="inputMonthlyIncome" name="monthlyIncome" placeholder="Gross Monthly Income"/>
+                        <input type="number" id="inputInvestAmt" name="investAmt" placeholder="Investment Amount"/>
                     </td>
                 </tr>
                 <tr>
                     <th class="calcHeaders">
-                        <label for="inputTotalExpenses">Total Expenses:</label>
+                        <label for="inputNumPeriods">Number of Periods:</label>
                     </th>
                     <td>
-                        <input type="number" id="inputTotalExpenses" name="totalExpenses" placeholder="Total Expenses"/>
+                        <input type="number" id="inputNumPeriods" name="numPeriods" placeholder="Number of Periods"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="calcHeaders">
+                        <label for="inputInterestRate">Interest Rate (%):</label>
+                    </th>
+                    <td>
+                        <input type="number" id="inputInterestRate" name="interestRate" placeholder="Interest Rate"/>
                     </td>
                 </tr>
                 <tr>
@@ -91,11 +85,11 @@
                 </tr>
                 <tr>
                     <td class="calcButton" colspan="2">
-                        <button type="button" onclick="housePayment()">Calculate</button>
+                        <button type="button" onclick="compoundInterest()">Calculate</button>
                     </td>
                 </tr>
             </table>
-            <p class="calcOutput" id="payment"></p>
+            <p class="calcOutput" id="interest"></p>
         </form>
     </section>
     <br />
