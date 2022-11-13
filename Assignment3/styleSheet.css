@@ -4,66 +4,66 @@
 }
 
 h1 {
-    text-align:center;
+    text-align: center;
 }
 
 body {
     background-color: #202c4a;
-    color:lightgray;
+    color: lightgray;
 }
 
 section {
-    border:hidden;
-    border-radius:10px;
-    background-color:lightgray;
-    color:black;
-    padding:10px;
-    margin-right:25%;
-    margin-left:25%;
+    border: hidden;
+    border-radius: 10px;
+    background-color: lightgray;
+    color: black;
+    padding: 10px;
+    margin-right: 25%;
+    margin-left: 25%;
 }
 
 /*Index*/
 .indexHeader {
-    text-align:center; 
+    text-align: center;
 }
 
 /*Nav Menu*/
 .menuTable {
-    margin-right:auto;
-    margin-left:auto;
-    border:solid;
-    border-width:2px;
-    border-color:black;
-    border-collapse:collapse;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    border-collapse: collapse;
 }
 
 .menuOptions {
-    border:solid;
-    border-width:2px;
-    border-color:black;
-    padding:10px;
-    font-weight:bold;
-    background-color:lightgray;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 10px;
+    font-weight: bold;
+    background-color: lightgray;
 }
 
 .menuLink:hover {
-    background-color:gray;
+    background-color: gray;
 }
 
 /*Calculator Formatting*/
 .calcHeaders {
-    text-align:right;
+    text-align: right;
 }
 
 .calcTable {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .calcButton {
-    text-align:center;
+    text-align: center;
 }
 
 .calcOutput {
-    text-align:center;
+    text-align: center;
 }
