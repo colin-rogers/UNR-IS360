@@ -1,1 +1,166 @@
+<!DOCTYPE html>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Future Value</title>
+    <!-- The following makes the page responsive. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- We need the following to use bootstrap. -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- Many of the Bootstrap components use JavaScript and jQuery. The following links
+        are usually necessary. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <!--JavaScript Functions-->
+    <script>
+        function FutureValue() {
+            ///////////////////////////////////////////
+            // Get input variable
+            var initialInvestment = document.getElementById("inputInitialInvestment").value;
+            var monthlyDepositAmount = document.getElementById("inputDepositAmount").value;
+            var annualInterestRate = document.getElementById("inputInterestRate").value;
+            var investmentTermYears = document.getElementById("inputInvestmentTerm").value;
+
+            // Convert years to months
+            var monthlyInterestRate = (annualInterestRate / 12) / 100;
+            var investmentTermMonths = (investmentTermYears * 12);
+
+            ///////////////////////////////////////////
+            // Create table elements
+            var tbl = document.createElement("table");
+
+            // Create table header
+            var header = tbl.createTHead();
+
+            // Insert row
+            var row = header.insertRow(0);
+
+            ////////////////////////////////////////////////////////////
+            // Create list / array
+            var list = ["Period", "Beg. Balance", "Recurring Deposit Amount", "Recurring Interest", "New Balance"]
+
+            // Iterate list
+            for (let i = 0; i < list.length; i++) {
+                var cell = row.insertCell(i);
+                var currentText = document.createTextNode(list[i]);
+                cell.appendChild(currentText);
+            }
+
+            ////////////////////////////////////////////////////////////
+            // Initialize table body
+            var tblBody = tbl.createTBody();
+
+            ////////////////////////////////////////////////////////////
+            // Running total counter
+            var currentValue = initialInvestment;
+
+            ////////////////////////////////////////////////////////////
+            // Do calculation and create row
+            for (var currentPeriod = 1; currentPeriod <= investmentTermMonths; currentPeriod++) {
+
+                // Starting balance at beginning of loop
+                var beginningBalance = currentValue;
+
+                ////////////////////////////////////////////////////////////
+                // Apply monthly deposit
+                currentValue = parseFloat(currentValue) + parseFloat(monthlyDepositAmount);
+                // Calculate current interest beg balance * rate
+                var interest = parseFloat(currentValue) * parseFloat(monthlyDepositAmount);
+                // Calculate new balance by adding current balance and interest
+                currentValue = parseFloat(currentValue) + parseFloat(interest);
+
+                ////////////////////////////////////////////////////////////
+                // Create table row
+                var row = tblBody.insertRow();
+                // Create row cell
+                var cell = row.insertCell(0);
+                // Create cell text
+                var currentText = document.createTextNode(currentPeriod);
+                // Apply text to cell
+                cell.appendChild(currentText);
+
+                // Cell 2
+                cell = row.insertCell(1);
+                currentText = document.createTextNode(beginningBalance);
+                cell.appendChild(currentText);
+
+                // Cell 3
+                cell = row.insertCell(2);
+                currentText = document.createTextNode(monthlyDepositAmount);
+                cell.appendChild(currentText);
+
+                // Cell 4
+                cell = row.insertCell(3);
+                currentText = document.createTextNode(interest);
+                cell.appendChild(currentText);
+
+                // Cell 5
+                cell = row.insertCell(4);
+                currentText = document.createTextNode(currentValue);
+                cell.appendChild(currentText);
+            }
+            ////////////////////////////////////////////////////////////
+            // Target placeholder
+            var divPlaceholder = document.getElementById("divPlaceholder");
+            // Apply changes
+            divPlaceholder.appendChild(tbl);
+        }
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                <label for="initialInvestment">Initial Investment: </label>
+            </th>
+            <td>
+                <input type="number" id="inputInitialInvestment" placeholder="Initial Investment"/>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="depositAmount">Monthly Deposit Amount: </label>
+            </th>
+            <td>
+                <input type="number" id="inputDepositAmount" placeholder="Monthly Deposit Amount"/>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="interestRate">Annual Interest Rate: </label>
+            </th>
+            <td>
+                <input type="number" id="inputInterestRate" placeholder="Annual Interest Rate"/>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="investmentTerm">Investment Term (Years: )</label>
+            </th>
+            <td>
+                <input type="number" id="inputInvestmentTerm" placeholder="Investment Term (Years)"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="FutureValue()">Calculate</button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div id="divPlaceholder"></div>
+</body>
+</html>
