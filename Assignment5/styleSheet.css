@@ -1,1 +1,70 @@
+/*Universal*/
+* {
+    font-family: Verdana;
+}
 
+h1 {
+    text-align:center;
+}
+
+li {
+    padding-top:5px;
+}
+
+section {
+    padding-left:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:10px;
+}
+
+h2 {
+    color: #081c44;
+}
+
+/*Nav Menu*/
+.menuTable {
+    margin-right: auto;
+    margin-left: auto;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    border-collapse: collapse;
+}
+
+.menuOptions {
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 10px;
+    font-weight: bold;
+    background-color: lightgray;
+}
+
+.menuLink:hover {
+    background-color: gray;
+}
+
+/*Page*/
+.pageTable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backgroundColor {
+    background-color: #202c4a;
+}
+
+.titleH1 {
+    color:lightgray;
+}
+
+.nameH2 {
+    color:lightgray;
+    text-align:center;
+}
+
+.articleBox {
+    border-radius:10px;
+    background-color:lightgray;
+}
