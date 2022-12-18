@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Make List Demo</title>
+    <script>
+        function makeList() {
+            var list = document.createElement("ul");
+
+            // Iterate list
+            for (var i = 1; i <= 50; i++) {
+                // Create list item
+                var li = document.createElement("li");
+                // Create text
+                var currentText = document.createTextNode("Item " + i.toString());
+                // Add text to list item
+                li.appendChild(currentText);
+                // Add item to list
+                list.appendChild(li);
+            }
+
+            // Apply changes
+            var divPlaceholder = document.getElementById("divPlaceholder");
+            divPlaceholder.appendChild(list);
+        }
+    </script>
+</head>
+<body>
+    <button id="btnGo" onclick="makeList()">Go</button>
+    <div id="divPlaceholder"></div>
+</body>
+</html>
